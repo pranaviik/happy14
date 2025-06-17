@@ -105,6 +105,20 @@ function collectCake(player, cake) {
         fontSize: '20px',
         color: '#ffcc00'
     }).setOrigin(0.5);
+    
+
+    const restartButton = this.add.text(GAME_WIDTH / 2, 300, 'Restart', {
+    fontFamily: 'monospace',
+    fontSize: '20px',
+    color: '#ffcc00',
+    backgroundColor: '#000000',
+    padding: { x: 10, y: 5 },
+    align: 'center'})
+    .setOrigin(0.5)
+    .setInteractive({ useHandCursor: true })
+    .on('pointerdown', () => {
+    this.scene.restart();
+    });
 
 }
 
